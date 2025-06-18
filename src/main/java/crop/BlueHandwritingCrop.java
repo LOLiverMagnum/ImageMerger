@@ -1,21 +1,17 @@
-package org.example;
+package crop;
 
-import org.bytedeco.opencv.global.opencv_core;
 import org.bytedeco.opencv.global.opencv_imgcodecs;
-import org.bytedeco.opencv.global.opencv_imgproc;
-import org.bytedeco.opencv.opencv_core.*;
-import org.bytedeco.opencv.opencv_imgproc.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.bytedeco.opencv.opencv_core.*;
+
 
 import static org.bytedeco.opencv.global.opencv_core.*;
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
 
 public class BlueHandwritingCrop {
     public static void main(String[] args) {
-        String inputPath = "input/test.jpg";
-        String outputPath = "output/cropped.jpg";
+        String inputPath = "src/main/resources/input/test.jpg";
+        String outputPath = "src/main/resources/output/cropped.jpg";
 
         // Загружаем изображение
         Mat image = opencv_imgcodecs.imread(inputPath);

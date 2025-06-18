@@ -1,9 +1,9 @@
-package org.example;
+package tests;
 import net.sourceforge.tess4j.Tesseract;
 import net.sourceforge.tess4j.TesseractException;
 
 import java.io.File;
-
+//TODO Тут тест падает. Переписать.
 public class TesseractTest {
     public static void main(String[] args) {
         Tesseract tesseract = new Tesseract();
@@ -15,7 +15,7 @@ public class TesseractTest {
         tesseract.setLanguage("rus");
 
         try {
-            File imageFile = new File("src/main/resources/test.jpg"); // путь к изображению
+            File imageFile = new File("src/main/resources/input/test.jpg"); // путь к изображению
             String result = tesseract.doOCR(imageFile);
             System.out.println("Результат распознавания:\n" + result);
         } catch (TesseractException e) {
